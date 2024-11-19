@@ -4,7 +4,7 @@
 ### AnyKernel setup
 # global properties
 properties() { '
-kernel.string=E404 Kernel by Tokito
+kernel.string=E404 Kernel Modified by Tokito
 do.devicecheck=1
 do.modules=0
 do.systemless=1
@@ -35,17 +35,6 @@ PATCH_VBMETA_FLAG=auto;
 ui_print " ";
 ui_print "Installing Kernel : "$ZIPFILE" ";
 ui_print " ";
-
-case "$ZIPFILE" in
-    *ksu*|*KSU*)
-        ui_print " • Using KSU variant";
-        rm Image;
-        mv ksu/Image $home/Image;
-    ;;
-    *)
-        ui_print " • Using normal variant";
-    ;;
-esac
 
 # boot install
 dump_boot;
